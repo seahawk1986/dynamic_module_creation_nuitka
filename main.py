@@ -43,7 +43,7 @@ def surprise():
             break
         elif event == 'redbutton':  # actions if the red button is pressed
             window['redbutton'].update(disabled=True)  # disable the button while the script is running
-            command = ['python3', 'external_program.py', '--run-python', basedir / 'datei.py']
+            command = ['external_program.py', '--run-python', basedir / 'datei.py']
             try:
                 s = subprocess.run(command, env=ENV, text=True, check=True, capture_output=True)
             except subprocess.CalledProcessError as err:
